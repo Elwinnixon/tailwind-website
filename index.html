@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alokozay</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom Styles */
+        #welcome {
+            background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-red-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-semibold">Alokozay</div>
+
+            <!-- Navbar Links -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#welcome" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#collections" class="hover:underline">Collections</a></li>
+                <li><a href="#reviews" class="hover:underline">Reviews</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+
+            <!-- Cart Icon -->
+            <a href="#cart" class="ml-4 text-white hover:text-gray-300">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+            </a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="hidden">
+                <label for="menu-toggle" class="text-white cursor-pointer">
+                    <i class="fas fa-bars fa-lg"></i>
+                </label>
+                <ul class="absolute left-0 w-full bg-red-600 mt-2 hidden" id="mobile-menu">
+                    <li><a href="#welcome" class="block px-4 py-2 hover:bg-red-700">Home</a></li>
+                    <li><a href="#about" class="block px-4 py-2 hover:bg-red-700">About</a></li>
+                    <li><a href="#collections" class="block px-4 py-2 hover:bg-red-700">Collections</a></li>
+                    <li><a href="#reviews" class="block px-4 py-2 hover:bg-red-700">Reviews</a></li>
+                    <li><a href="#contact" class="block px-4 py-2 hover:bg-red-700">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content "> <!-- Added margin top to prevent content from hiding behind the navbar -->
+        <!-- Welcome Section -->
+        <section id="welcome" class="text-white flex items-center justify-center relative">
+            <div class="text-center relative z-10 px-4">
+                <h1 class="text-5xl font-bold mb-4">Welcome to Our Shoe Collection</h1>
+                <p class="text-lg mb-6">Step into style with our vibrant shoe selections!</p>
+                <a href="#about" class="bg-white text-red-600 py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition">Explore Collections</a>
+            </div>
+        </section>
+
+        <!-- Collections Section -->
+        <div id="collections" class="container mx-auto mt-16 p-6 bg-red-700 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-white mb-6">Our Shoe Collections</h1>
+            <p class="text-gray-200 mb-4">
+                Discover our curated collections featuring the latest trends in footwear. Whether you're looking for casual shoes, elegant options, or athletic footwear, we have something for everyone!
+            </p>
+
+            <!-- Images Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/b/j/n/-original-imagg7szyqp8dn77.jpeg?q=90&crop=false" alt="Casual Shoes" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black">Casual Shoes</h3>
+                        <p class="text-black">$49.99</p>
+                        <button class="mt-2 bg-black text-white py-1 px-4 rounded hover:bg-gray-800 transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwd1OXBReWYp__O0uZ3IuI4GMKmeZxxUf-5g&s" alt="Elegant Options" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black">Elegant Options</h3>
+                        <p class="text-black">$89.99</p>
+                        <button class="mt-2 bg-black text-white py-1 px-4 rounded hover:bg-gray-800 transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBeQP27MYS3HGHKjLoU14cFp--HI_u0F6whg&s" alt="Rugged Footwear" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black">Rugged Footwear</h3>
+                        <p class="text-black">$99.99</p>
+                        <button class="mt-2 bg-black text-white py-1 px-4 rounded hover:bg-gray-800 transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8-k_8sr7-FKPRafJpYunHDWni_Ja79vZqQ&s" alt="Athletic Shoes" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black">Athletic Shoes</h3>
+                        <p class="text-black">$69.99</p>
+                        <button class="mt-2 bg-black text-white py-1 px-4 rounded hover:bg-gray-800 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about" class="container mx-auto mt-16 p-6 bg-gray-800 rounded-lg shadow-lg text-white">
+            <h1 class="text-3xl font-bold mb-4">About Us</h1>
+            <p class="mb-4">
+                Welcome to Shoe Collection, your number one source for all types of footwear. We’re dedicated to providing you the very best of shoes, with an emphasis on style, comfort, and durability.
+            </p>
+            <p class="mb-4">
+                Founded in 2024, Shoe Collection has come a long way from its beginnings. When we first started out, our passion for trendy shoes drove us to start our own business. We now serve customers all over the country and are thrilled to be a part of the eco-friendly wing of the fashion industry.
+            </p>
+            <p class="mb-4">
+                At Shoe Collection, our mission is to deliver high-quality footwear that enhances the style and comfort of our customers. We believe that shoes are not just a functional item, but an essential part of personal expression. That's why we meticulously curate our collections to reflect the latest trends and timeless classics, ensuring that our customers find the perfect pair for every occasion.
+            </p>
+            <p class="mb-4">
+                Sustainability is a core value of our brand. We are committed to using eco-friendly materials and ethical manufacturing processes, striving to minimize our environmental impact. Our shoes are crafted with care, ensuring that every step taken in our footwear supports not only your style but also the planet.
+            </p>
+            <p>
+                We offer a wide variety of collections, including casual shoes, elegant options, rugged footwear, and athletic shoes. Our commitment is to provide our customers with high-quality products that they will love and cherish, and our dedicated customer service team is here to assist you every step of the way.
+            </p>
+        </section>
+
+        <!-- Reviews Section -->
+        <div id="reviews" class="container mx-auto mt-16 p-6 bg-red-700 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-white mb-4">Customer Reviews</h1>
+            <p class="text-gray-200 mb-4">Here's what our customers have to say:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Review 1 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <p class="text-gray-800 mb-2 font-semibold">"I love the variety of shoes available! Perfect for any occasion."</p>
+                    <p class="text-gray-600">- John Doe</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <p class="text-gray-800 mb-2 font-semibold">"Great selection and fast shipping. I will be back for more!"</p>
+                    <p class="text-gray-600">- Jane Smith</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <p class="text-gray-800 mb-2 font-semibold">"The best collection of shoes I have ever seen. Highly recommended!"</p>
+                    <p class="text-gray-600">- Emily Johnson</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-red-600 p-6 mt-8">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="https://instagram.com" target="_blank" class="hover:text-gray-300">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="hover:text-gray-300">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="hover:text-gray-300">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-lg font-semibold">Contact Us</p>
+                    <p>Phone: +91 8281755017</p>
+                    <p>Email: Alokozay@shoecollection.com</p>
+                    <p>Address: Thrissur</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
